@@ -136,11 +136,11 @@ const AsciiBackground = () => {
 const TopBar = () => {
   return (
     <div className="fixed top-0 left-0 w-full z-50 border-b border-[#1E1E1C] bg-[#080808]/80 backdrop-blur-sm">
-      <div className="flex justify-between items-center px-[7vw] h-16">
-        <div className="text-[#FFD400] font-mono text-[13px] tracking-wider">
+      <div className="flex justify-between md:justify-center items-center px-[7vw] h-16 relative">
+        <div className="text-[#FFD400] font-mono text-[13px] tracking-wider absolute left-[7vw]">
           AM
         </div>
-        <div className="flex gap-4 font-mono text-[11px] text-[#6B6B67]">
+        <div className="flex gap-4 md:gap-6 font-mono text-[11px] text-[#6B6B67] ml-auto md:ml-0">
           <Link href="#work" className="hover:text-[#F2EFE8] transition-colors hover-trigger">Work</Link>
           <span>·</span>
           <Link href="#about" className="hover:text-[#F2EFE8] transition-colors hover-trigger">About</Link>
