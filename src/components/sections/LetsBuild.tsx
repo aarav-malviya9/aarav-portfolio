@@ -1,18 +1,9 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function LetsBuild() {
-  const [showToast, setShowToast] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText('27aaravmalviya@gmail.com');
-    setShowToast(true);
-    setTimeout(() => setShowToast(false), 2000);
-  };
-
   return (
     <motion.section 
       id="contact" 
@@ -22,22 +13,6 @@ export default function LetsBuild() {
       viewport={{ once: false, amount: 0.15 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
     >
-      
-      {/* Toast Notification */}
-      <AnimatePresence>
-        {showToast && (
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 50 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-            className="fixed top-8 right-8 z-[999] bg-[#C8FF00] text-[#080808] font-mono text-[11px] px-[16px] py-[8px] pointer-events-none"
-          >
-            ✓ Copied
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {/* Top Section */}
       <div className="flex-1 flex flex-col md:flex-row w-full px-[7vw] pt-[15vh]">
         
@@ -53,12 +28,14 @@ export default function LetsBuild() {
           </h2>
 
           <div className="mt-[40px]">
-            <button 
-              onClick={handleCopy}
+            <a 
+              href="mailto:27aaravmalviya@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-mono text-[#C8FF00] text-[18px] hover:opacity-70 transition-opacity hover-trigger text-left"
             >
               27aaravmalviya@gmail.com
-            </button>
+            </a>
           </div>
 
           <div className="mt-[24px] font-mono text-[#6B6B67] text-[11px]">
@@ -102,10 +79,10 @@ export default function LetsBuild() {
         </div>
         
         <div className="flex gap-6">
-          <Link href="https://github.com/aarav-malviya9" className="font-mono text-[#3A3A38] text-[10px] hover:text-[#F2EFE8] transition-colors hover-trigger">
+          <Link href="https://github.com/aarav-malviya9" target="_blank" rel="noopener noreferrer" className="font-mono text-[#3A3A38] text-[10px] hover:text-[#F2EFE8] transition-colors hover-trigger">
             GitHub
           </Link>
-          <Link href="https://linkedin.com/in/aarav-malviya" className="font-mono text-[#3A3A38] text-[10px] hover:text-[#F2EFE8] transition-colors hover-trigger">
+          <Link href="https://linkedin.com/in/aarav-malviya" target="_blank" rel="noopener noreferrer" className="font-mono text-[#3A3A38] text-[10px] hover:text-[#F2EFE8] transition-colors hover-trigger">
             LinkedIn
           </Link>
         </div>
