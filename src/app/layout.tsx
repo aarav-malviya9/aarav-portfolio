@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import CustomCursor from '@/components/effects/CustomCursor';
 import LenisScroll from '@/components/effects/LenisScroll';
 import Terminal from '@/components/ui/Terminal';
 import CommandK from '@/components/ui/CommandK';
@@ -36,7 +35,6 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-[#050505] text-white">
         <LenisScroll />
-        <CustomCursor />
         <Terminal />
         <CommandK />
         {children}
