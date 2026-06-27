@@ -8,7 +8,7 @@ export default function LetsBuild() {
   const [showToast, setShowToast] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('hello@blitzy.co');
+    navigator.clipboard.writeText('27aaravmalviya@gmail.com');
     setShowToast(true);
     setTimeout(() => setShowToast(false), 2000);
   };
@@ -57,7 +57,7 @@ export default function LetsBuild() {
               onClick={handleCopy}
               className="font-mono text-[#C8FF00] text-[18px] hover:opacity-70 transition-opacity hover-trigger text-left"
             >
-              hello@blitzy.co
+              27aaravmalviya@gmail.com
             </button>
           </div>
 
@@ -102,7 +102,7 @@ export default function LetsBuild() {
         </div>
         
         <div className="flex gap-6">
-          <Link href="https://github.com/aarav-malviya" className="font-mono text-[#3A3A38] text-[10px] hover:text-[#F2EFE8] transition-colors hover-trigger">
+          <Link href="https://github.com/aarav-malviya9" className="font-mono text-[#3A3A38] text-[10px] hover:text-[#F2EFE8] transition-colors hover-trigger">
             GitHub
           </Link>
           <Link href="https://linkedin.com/in/aarav-malviya" className="font-mono text-[#3A3A38] text-[10px] hover:text-[#F2EFE8] transition-colors hover-trigger">
@@ -111,6 +111,6 @@ export default function LetsBuild() {
         </div>
       </footer>
 
-      </motion.section>
+    </motion.section>
   );
 }

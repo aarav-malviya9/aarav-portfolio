@@ -7,46 +7,46 @@ import { ArrowUpRight } from 'lucide-react';
 const projects = [
   {
     id: '01',
-    title: 'BLITZY PLATFORM',
-    role: 'Founder & Lead Engineer',
-    year: '2026',
-    tech: ['Next.js', 'Supabase', 'Python Agents'],
-    stat: '80%+',
-    statDesc: 'of repetitive tasks automated',
-    link: '#',
+    title: 'JARVIS VOICE ASSISTANT',
+    role: 'AI Developer',
+    year: '2024',
+    tech: ['Python', 'SpeechRecognition', 'Automation'],
+    stat: '100%',
+    statDesc: 'hands-free desktop control',
+    link: 'https://github.com/aarav-malviya9/Jarvis-Desktop-Voice-Assistant',
     fullWidth: true
   },
   {
     id: '02',
-    title: 'LITELLM + GEMINI',
-    role: 'Integration Specialist',
-    year: '2025',
-    tech: ['Python', 'LiteLLM', 'Gemini'],
-    stat: '35%',
-    statDesc: 'API latency reduced',
-    link: '#',
+    title: '3D WEBGL PORTFOLIO',
+    role: 'Frontend Developer',
+    year: '2024',
+    tech: ['TypeScript', 'Three.js', 'React Three Fiber'],
+    stat: '60',
+    statDesc: 'frames per second render',
+    link: 'https://github.com/aarav-malviya9/portfolio-3D',
     fullWidth: false
   },
   {
     id: '03',
-    title: 'N8N LEADS SYNC',
-    role: 'Automation Architect',
-    year: '2025',
-    tech: ['n8n', 'Webhooks', 'CRM'],
-    stat: '10K+',
-    statDesc: 'leads synced monthly',
-    link: '#',
+    title: 'TECHYBLITZ',
+    role: 'Full Stack Developer',
+    year: '2024',
+    tech: ['Next.js', 'TailwindCSS', 'Vercel'],
+    stat: '10x',
+    statDesc: 'faster content delivery',
+    link: 'https://github.com/aarav-malviya9/Techyblitz',
     fullWidth: false
   },
   {
     id: '04',
-    title: 'PORTFOLIO SITE',
+    title: 'AWWWARDS PORTFOLIO',
     role: 'Design Engineer',
     year: '2026',
     tech: ['Next.js 15', 'Framer Motion', 'Tailwind'],
     stat: '100',
-    statDesc: 'Lighthouse score',
-    link: '#',
+    statDesc: 'Lighthouse performance score',
+    link: 'https://github.com/aarav-malviya9/aarav-portfolio',
     fullWidth: true
   }
 ];
@@ -129,7 +129,7 @@ export default function SelectedWork() {
                       </div>
                     </div>
 
-                    <Link href={project.link} className="relative z-10 inline-flex items-center text-[#C8FF00] font-mono text-[12px] group/link w-fit hover-trigger">
+                    <Link href={project.link} target="_blank" rel="noopener noreferrer" className="relative z-10 inline-flex items-center text-[#C8FF00] font-mono text-[12px] group/link w-fit hover-trigger">
                       <span>Live Project</span>
                       <ArrowUpRight className="w-3 h-3 ml-1" />
                       <span className="absolute left-0 bottom-[-2px] w-full h-[1px] bg-[#C8FF00] origin-left scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out" />
@@ -191,7 +191,7 @@ export default function SelectedWork() {
                       ))}
                     </div>
 
-                    <Link href={project.link} className="inline-flex items-center text-[#C8FF00] font-mono text-[12px] group/link w-fit hover-trigger">
+                    <Link href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#C8FF00] font-mono text-[12px] group/link w-fit hover-trigger">
                       <span>Live Project</span>
                       <ArrowUpRight className="w-3 h-3 ml-1" />
                       <span className="absolute left-0 bottom-[-2px] w-full h-[1px] bg-[#C8FF00] origin-left scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out" />
@@ -204,6 +204,6 @@ export default function SelectedWork() {
         </div>
 
       </div>
-      </motion.section>
+    </motion.section>
   );
 }
