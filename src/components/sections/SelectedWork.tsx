@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -14,7 +15,7 @@ const projects = [
     stat: '100%',
     statDesc: 'hands-free desktop control',
     link: 'https://github.com/aarav-malviya9/Jarvis-Desktop-Voice-Assistant',
-    fullWidth: true
+    gradient: 'from-blue-600/20 via-indigo-900/40 to-black'
   },
   {
     id: '02',
@@ -22,10 +23,10 @@ const projects = [
     role: 'Frontend Developer',
     year: '2024',
     tech: ['TypeScript', 'Three.js', 'React Three Fiber'],
-    stat: '60',
-    statDesc: 'frames per second render',
+    stat: '60fps',
+    statDesc: 'real-time 3D rendering',
     link: 'https://github.com/aarav-malviya9/portfolio-3D',
-    fullWidth: false
+    gradient: 'from-emerald-500/20 via-teal-900/40 to-black'
   },
   {
     id: '03',
@@ -36,7 +37,7 @@ const projects = [
     stat: '10x',
     statDesc: 'faster content delivery',
     link: 'https://github.com/aarav-malviya9/Techyblitz',
-    fullWidth: false
+    gradient: 'from-orange-500/20 via-red-900/40 to-black'
   },
   {
     id: '04',
@@ -47,163 +48,120 @@ const projects = [
     stat: '100',
     statDesc: 'Lighthouse performance score',
     link: 'https://github.com/aarav-malviya9/aarav-portfolio',
-    fullWidth: true
+    gradient: 'from-zinc-500/20 via-zinc-800/40 to-black'
   }
 ];
 
 export default function SelectedWork() {
+  const targetRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
+  // Moves the track horizontally as we scroll down
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
+
   return (
-    <motion.section 
-      id="work" 
-      className="w-full bg-[#050505] px-[7vw] pt-[120px] pb-[80px]"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.15 }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-    >
-      <div className="max-w-7xl mx-auto">
+    <section ref={targetRef} id="work" className="relative h-[400vh] bg-[#050505]">
+      {/* Sticky Container */}
+      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center bg-[#050505]">
         
-        {/* Section Opener */}
-        <div className="w-full mb-16 relative">
-          <div className="font-mono text-[#6B6B67] text-[11px] tracking-widest uppercase mb-6">
-            SELECTED WORK
-          </div>
-          
-          <div className="flex justify-between items-end">
-            <h2 className="font-syne font-black text-[#F2EFE8] leading-[0.9]" style={{ fontSize: 'clamp(48px, 7vw, 96px)' }}>
-              <div>REAL PRODUCTS.</div>
-              <div style={{ WebkitTextStroke: '1.5px #F2EFE8', color: 'transparent' }}>
-                NO PLACEHOLDERS.
-              </div>
-            </h2>
-            
-            <div className="hidden md:block font-syne font-black text-[#1E1E1C] text-[96px] leading-[0.8] select-none">
-              04
+        {/* Decorative Background Glows */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vh] bg-[#C8FF00]/5 rounded-full blur-[120px] pointer-events-none" />
+        
+        {/* Header (Overlayed) */}
+        <div className="absolute top-[12vh] left-[7vw] z-10 w-[86vw] flex justify-between items-end pointer-events-none">
+          <div>
+            <div className="font-mono text-[#6B6B67] text-[11px] tracking-widest uppercase mb-4">
+              SELECTED WORK
             </div>
+            <h2 className="font-syne font-black text-[#F2EFE8] leading-[0.9]" style={{ fontSize: 'clamp(32px, 5vw, 64px)' }}>
+              REAL PRODUCTS.
+            </h2>
+          </div>
+          <div className="font-syne font-black text-[#1E1E1C] text-[64px] leading-[0.8]">
+            04
           </div>
         </div>
 
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-[#1E1E1C] border border-[#1E1E1C]">
-          {projects.map((project, i) => (
-            <motion.div
-              key={project.id}
-              initial="initial"
-              whileHover="hover"
-              className={`group relative bg-[#0E0E0C] hover:bg-[#111110] transition-colors duration-300 flex ${
-                project.fullWidth ? 'md:col-span-2 min-h-[380px] flex-col md:flex-row' : 'col-span-1 min-h-[300px] flex-col'
-              }`}
-            >
-              {/* Sweeping Top Border */}
-              <motion.div 
-                className="absolute top-0 left-0 right-0 h-[2px] bg-[#C8FF00] z-10 origin-left"
-                variants={{
-                  initial: { clipPath: 'inset(0 100% 0 0)' },
-                  hover: { clipPath: 'inset(0 0% 0 0)' }
+        {/* Horizontal Track */}
+        <motion.div style={{ x }} className="flex gap-16 px-[7vw] items-center pt-[10vh]">
+          {projects.map((project, idx) => {
+            return (
+              <div 
+                key={project.id} 
+                className="group relative w-[85vw] md:w-[60vw] h-[60vh] md:h-[65vh] shrink-0 rounded-2xl overflow-hidden cursor-none"
+                style={{
+                  perspective: '1000px',
                 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-              />
-
-              {project.fullWidth ? (
-                // Full Width Layout
-                <>
-                  <div className="flex-1 p-10 md:p-14 flex flex-col justify-between relative border-b border-[#1E1E1C] md:border-b-0 md:border-r">
-                    <div className="absolute top-8 left-10 md:left-14 font-syne font-black text-[#1A1A1A] text-[80px] leading-[0.8] select-none pointer-events-none">
+              >
+                {/* 3D Panel */}
+                <motion.div
+                  className={`w-full h-full bg-gradient-to-br ${project.gradient} border border-white/5 rounded-2xl p-8 md:p-12 flex flex-col justify-between backdrop-blur-3xl shadow-[0_0_50px_rgba(0,0,0,0.5)] transform-gpu transition-transform duration-700 ease-out group-hover:scale-[1.02]`}
+                >
+                  
+                  {/* Top Layer */}
+                  <div className="flex justify-between items-start">
+                    <div className="font-syne font-black text-white/10 text-[80px] md:text-[120px] leading-[0.8] select-none">
                       {project.id}
                     </div>
                     
-                    <div className="relative z-10 mt-16 md:mt-12">
-                      <h3 className="font-syne font-bold text-[36px] text-[#F2EFE8] leading-[1.1] mb-2 uppercase tracking-tight">
-                        {project.title}
-                      </h3>
-                      <div className="font-mono text-[11px] text-[#6B6B67] mb-8">
+                    <Link 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-black/50 border border-white/10 px-4 py-2 rounded-full font-mono text-[11px] text-white/70 hover:text-[#C8FF00] hover:border-[#C8FF00]/50 transition-all hover-trigger backdrop-blur-md"
+                    >
+                      VIEW REPO <ArrowUpRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+
+                  {/* Center Layer */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <h3 className="font-syne font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30 text-center uppercase tracking-tighter" style={{ fontSize: 'clamp(40px, 6vw, 100px)' }}>
+                      {project.title}
+                    </h3>
+                  </div>
+
+                  {/* Bottom Layer */}
+                  <div className="flex flex-col md:flex-row justify-between items-end gap-6 relative z-10">
+                    <div className="space-y-4">
+                      <div className="font-mono text-[11px] text-[#F2EFE8]/70 uppercase tracking-widest">
                         {project.role} · {project.year}
                       </div>
-                      
-                      <div className="flex flex-wrap gap-2 mb-10">
-                        {project.tech.map((t, idx) => (
-                          <div key={idx} className="border border-[#2A2A27] font-mono text-[10px] text-[#6B6B67] px-[10px] py-[4px] uppercase">
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((t, i) => (
+                          <div key={i} className="bg-black/40 border border-white/5 font-mono text-[10px] text-white/60 px-3 py-1.5 rounded-full uppercase backdrop-blur-md">
                             {t}
                           </div>
                         ))}
                       </div>
                     </div>
-
-                    <Link href={project.link} target="_blank" rel="noopener noreferrer" className="relative z-10 inline-flex items-center text-[#C8FF00] font-mono text-[12px] group/link w-fit hover-trigger">
-                      <span>Live Project</span>
-                      <ArrowUpRight className="w-3 h-3 ml-1" />
-                      <span className="absolute left-0 bottom-[-2px] w-full h-[1px] bg-[#C8FF00] origin-left scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out" />
-                    </Link>
-                  </div>
-                  
-                  <div className="flex-1 p-10 md:p-14 flex flex-col justify-center">
-                    <motion.div 
-                      variants={{
-                        initial: { scale: 1 },
-                        hover: { scale: 1.05 }
-                      }}
-                      transition={{ duration: 0.4, ease: "easeOut" }}
-                      className="font-syne font-black text-[#C8FF00] text-[64px] md:text-[96px] leading-[0.9] tracking-tighter"
-                    >
-                      {project.stat}
-                    </motion.div>
-                    <div className="font-mono text-[13px] text-[#6B6B67] max-w-[200px] mt-4 leading-relaxed">
-                      {project.statDesc}
-                    </div>
-                  </div>
-                </>
-              ) : (
-                // Half Width Layout
-                <div className="flex-1 p-10 flex flex-col justify-between relative">
-                  <div className="absolute top-8 right-10 font-syne font-black text-[#1A1A1A] text-[64px] leading-[0.8] select-none pointer-events-none text-right">
-                    {project.id}
-                  </div>
-                  
-                  <div className="relative z-10">
-                    <motion.div 
-                      variants={{
-                        initial: { scale: 1 },
-                        hover: { scale: 1.05 }
-                      }}
-                      transition={{ duration: 0.4, ease: "easeOut" }}
-                      className="font-syne font-black text-[#C8FF00] text-[64px] leading-[0.9] tracking-tighter origin-left"
-                    >
-                      {project.stat}
-                    </motion.div>
-                    <div className="font-mono text-[12px] text-[#6B6B67] max-w-[200px] mt-2 mb-10 leading-relaxed">
-                      {project.statDesc}
-                    </div>
-                  </div>
-
-                  <div className="relative z-10 mt-auto">
-                    <h3 className="font-syne font-bold text-[24px] text-[#F2EFE8] leading-[1.1] mb-2 uppercase tracking-tight">
-                      {project.title}
-                    </h3>
-                    <div className="font-mono text-[11px] text-[#6B6B67] mb-6">
-                      {project.role} · {project.year}
-                    </div>
                     
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {project.tech.map((t, idx) => (
-                        <div key={idx} className="border border-[#2A2A27] font-mono text-[10px] text-[#6B6B67] px-[10px] py-[4px] uppercase">
-                          {t}
-                        </div>
-                      ))}
+                    <div className="text-right">
+                      <div className="font-syne font-black text-[#C8FF00] text-[48px] md:text-[64px] leading-none tracking-tighter">
+                        {project.stat}
+                      </div>
+                      <div className="font-mono text-[11px] text-white/50 uppercase tracking-wider mt-2 max-w-[150px] ml-auto">
+                        {project.statDesc}
+                      </div>
                     </div>
-
-                    <Link href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#C8FF00] font-mono text-[12px] group/link w-fit hover-trigger">
-                      <span>Live Project</span>
-                      <ArrowUpRight className="w-3 h-3 ml-1" />
-                      <span className="absolute left-0 bottom-[-2px] w-full h-[1px] bg-[#C8FF00] origin-left scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300 ease-out" />
-                    </Link>
                   </div>
-                </div>
-              )}
-            </motion.div>
-          ))}
+
+                </motion.div>
+              </div>
+            );
+          })}
+        </motion.div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none opacity-50">
+          <div className="font-mono text-[10px] text-white tracking-widest uppercase">Scroll</div>
+          <div className="w-[1px] h-[40px] bg-gradient-to-b from-white/50 to-transparent" />
         </div>
 
       </div>
-    </motion.section>
+    </section>
   );
 }
