@@ -135,7 +135,12 @@ const AsciiBackground = () => {
 // Top Navigation Bar
 const TopBar = () => {
   return (
-    <div className="fixed top-0 left-0 w-full z-50 border-b border-[#1E1E1C] bg-[#080808]/80 backdrop-blur-sm">
+    <motion.div 
+      initial={{ y: -30, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+      className="fixed top-0 left-0 w-full z-50 border-b border-[#1E1E1C] bg-[#080808]/80 backdrop-blur-sm"
+    >
       <div className="flex justify-between md:justify-center items-center px-[7vw] h-16 relative">
         <div className="text-[#00FFFF] font-mono text-[13px] tracking-wider absolute left-[7vw]">
           AM
@@ -148,7 +153,7 @@ const TopBar = () => {
           <Link href="#contact" className="hover:text-[#F2EFE8] transition-colors hover-trigger">Contact</Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -278,14 +283,24 @@ export default function Hero() {
         </div>
 
         {/* Right Side Stats (hidden on mobile) */}
-        <div className="hidden md:flex absolute right-[7vw] top-1/2 -translate-y-1/2 flex-col gap-[32px]">
-          <StatBlock value={80} label="tasks automated" delay={200} />
-          <StatBlock value={15} label="hours saved/wk" delay={400} />
-          <StatBlock value={100} label="percent focused" delay={600} />
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="hidden md:flex absolute right-[7vw] top-1/2 -translate-y-1/2 flex-col gap-[32px]"
+        >
+          <StatBlock value={80} label="tasks automated" delay={800} />
+          <StatBlock value={15} label="hours saved/wk" delay={1000} />
+          <StatBlock value={100} label="percent focused" delay={1200} />
+        </motion.div>
 
         {/* Bottom Bar */}
-        <div className="absolute bottom-[40px] left-[7vw] right-[7vw] flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="absolute bottom-[40px] left-[7vw] right-[7vw] flex flex-col md:flex-row justify-between items-start md:items-end gap-6"
+        >
           <div className="font-mono text-[#6B6B67] text-[10px] tracking-[0.2em] uppercase">
             BASED IN INDIA • ACTIVE GLOBALLY
           </div>
@@ -304,7 +319,7 @@ export default function Hero() {
               VIEW WORK
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

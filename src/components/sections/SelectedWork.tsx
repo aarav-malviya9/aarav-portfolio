@@ -72,11 +72,11 @@ function ProjectCard({
   const smoothDistance = useSpring(distance, { damping: 25, stiffness: 150 });
 
   // Math mappings for the Coverflow 3D effect
-  const rotateY = useTransform(smoothDistance, [-2, -1, 0, 1, 2], [60, 45, 0, -45, -60]);
-  const scale = useTransform(smoothDistance, [-2, -1, 0, 1, 2], [0.6, 0.75, 1, 0.75, 0.6]);
-  const x = useTransform(smoothDistance, [-2, -1, 0, 1, 2], ["-60%", "-30%", "0%", "30%", "60%"]);
-  const z = useTransform(smoothDistance, [-2, -1, 0, 1, 2], [-500, -200, 0, -200, -500]);
-  const opacity = useTransform(smoothDistance, [-2, -1, 0, 1, 2], [0, 0.3, 1, 0.3, 0]);
+  const rotateY = useTransform(smoothDistance, [-2, -1, 0, 1, 2], [60, 35, 0, -35, -60]);
+  const scale = useTransform(smoothDistance, [-2, -1, 0, 1, 2], [0.6, 0.8, 1, 0.8, 0.6]);
+  const x = useTransform(smoothDistance, [-2, -1, 0, 1, 2], ["-120%", "-60%", "0%", "60%", "120%"]);
+  const z = useTransform(smoothDistance, [-2, -1, 0, 1, 2], [-800, -400, 0, -400, -800]);
+  const opacity = useTransform(smoothDistance, [-2, -1, 0, 1, 2], [0, 0.5, 1, 0.5, 0]);
   const blur = useTransform(smoothDistance, [-2, -1, 0, 1, 2], ["blur(10px)", "blur(4px)", "blur(0px)", "blur(4px)", "blur(10px)"]);
 
   // We only want the card to be fully interactive (pointer events) if it's currently at the center
@@ -180,6 +180,9 @@ export default function SelectedWork() {
     });
   }, [activeFloat]);
 
+  // Header should fade out immediately as scroll starts (0 to 0.1 of progress)
+  const headerOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
+
   return (
     <section ref={containerRef} id="work" className="relative h-[400vh] bg-[#050505]">
       {/* Sticky Viewport */}
@@ -194,7 +197,10 @@ export default function SelectedWork() {
         </div>
         
         {/* Header (Overlayed) */}
-        <div className="absolute top-[12vh] left-[7vw] z-50 w-[86vw] flex justify-between items-end pointer-events-none">
+        <motion.div 
+          style={{ opacity: headerOpacity }}
+          className="absolute top-[12vh] left-[7vw] z-50 w-[86vw] flex justify-between items-end pointer-events-none"
+        >
           <div>
             <div className="font-mono text-[#6B6B67] text-[11px] tracking-widest uppercase mb-4">
               SELECTED WORK
@@ -206,7 +212,7 @@ export default function SelectedWork() {
           <div className="font-syne font-black text-[#1E1E1C] text-[64px] leading-[0.8]">
             04
           </div>
-        </div>
+        </motion.div>
 
         {/* 3D Coverflow Container */}
         <div 

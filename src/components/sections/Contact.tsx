@@ -17,7 +17,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto text-center space-y-16">
         <div>
           <span className="font-mono text-xs uppercase tracking-widest text-cyan-electric font-semibold block mb-4">GET IN TOUCH</span>
-          <h2 className="text-4xl md:text-8xl font-display font-black text-white leading-none uppercase select-none">
+          <h2 className="font-display font-black text-white leading-none uppercase select-none w-full" style={{ fontSize: 'clamp(36px, 9vw, 96px)' }}>
             LET'S BUILD<br />SOMETHING.
           </h2>
         </div>
