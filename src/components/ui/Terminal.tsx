@@ -88,6 +88,7 @@ export default function Terminal() {
           { text: 'Aarav Malviya is a self-taught AI automation developer & engineer from India.', type: 'output' },
           { text: 'Founder of Blitzy, helping companies replace manual, repetitive workflows with scalable AI agents.', type: 'output' },
           { text: 'Comfortable stack: TypeScript, Next.js, Framer Motion, Python, n8n, OpenAI, Gemini API, Vercel, Supabase.', type: 'output' },
+          { text: 'Email:             27aaravmalviya@gmail.com', type: 'output' },
         ]);
         break;
       case 'projects':
@@ -113,7 +114,7 @@ export default function Terminal() {
         setHistory([
           ...newHistory,
           { text: 'Contact Systems:', type: 'success' },
-          { text: '  Email:    hello@blitzy.co', type: 'output' },
+          { text: '  Email:    27aaravmalviya@gmail.com', type: 'output' },
           { text: '  GitHub:   github.com/aarav-malviya', type: 'output' },
           { text: '  LinkedIn: linkedin.com/in/aarav-malviya', type: 'output' },
         ]);
