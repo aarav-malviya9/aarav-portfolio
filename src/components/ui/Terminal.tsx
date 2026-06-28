@@ -47,7 +47,7 @@ export default function Terminal() {
           setHistory((prev) => [
             ...prev,
             { text: '>> SECRET OVERRIDE ENABLED: KONAMI CODE DETECTED <<', type: 'success' },
-            { text: 'Aarav is a 15-year-old developer obsessed with making AI agents and premium code.', type: 'output' },
+            { text: 'Aarav is a developer obsessed with making AI agents and premium code.', type: 'output' },
           ]);
           konamiIndex = 0;
         }
@@ -85,7 +85,7 @@ export default function Terminal() {
       case 'about':
         setHistory([
           ...newHistory,
-          { text: 'Aarav Malviya is a 15-year-old self-taught AI automation developer & engineer from India.', type: 'output' },
+          { text: 'Aarav Malviya is a self-taught AI automation developer & engineer from India.', type: 'output' },
           { text: 'Founder of Blitzy, helping companies replace manual, repetitive workflows with scalable AI agents.', type: 'output' },
           { text: 'Comfortable stack: TypeScript, Next.js, Framer Motion, Python, n8n, OpenAI, Gemini API, Vercel, Supabase.', type: 'output' },
         ]);

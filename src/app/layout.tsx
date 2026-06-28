@@ -7,11 +7,11 @@ import CommandK from '@/components/ui/CommandK';
 
 export const metadata: Metadata = {
   title: 'Aarav Malviya | AI Automation & Web Developer',
-  description: '15-year-old AI Automation Developer helping businesses build modern websites, AI systems, and automation workflows.',
+  description: 'AI Automation Developer helping businesses build modern websites, AI systems, and automation workflows.',
   metadataBase: new URL('https://aarav-malviya.vercel.app'),
   openGraph: {
     title: 'Aarav Malviya | AI Automation & Web Developer',
-    description: '15-year-old AI Automation Developer helping businesses build modern websites, AI systems, and automation workflows.',
+    description: 'AI Automation Developer helping businesses build modern websites, AI systems, and automation workflows.',
     url: 'https://aarav-malviya.vercel.app',
     siteName: 'Aarav Malviya Portfolio',
     locale: 'en_US',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Aarav Malviya | AI Automation & Web Developer',
-    description: '15-year-old AI Automation Developer helping businesses build modern websites, AI systems, and automation workflows.',
+    description: 'AI Automation Developer helping businesses build modern websites, AI systems, and automation workflows.',
   },
 };
 

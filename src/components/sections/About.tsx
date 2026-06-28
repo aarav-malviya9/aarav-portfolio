@@ -22,7 +22,7 @@ export default function About() {
 
         <div className="md:col-span-7 space-y-8 font-sans">
           <p className="text-zinc-300 text-lg md:text-xl leading-relaxed font-light">
-            I'm <strong className="text-white font-semibold">Aarav Malviya</strong>, a 15-year-old self-taught developer and builder based in India. I specialize in designing and engineering AI agents, automation pipelines, and modern web systems. 
+            I'm <strong className="text-white font-semibold">Aarav Malviya</strong>, a self-taught developer and builder based in India. I specialize in designing and engineering AI agents, automation pipelines, and modern web systems. 
           </p>
           <p className="text-zinc-400 text-base md:text-lg leading-relaxed font-light">
             As the founder of <strong className="text-white font-semibold">Blitzy</strong>, I collaborate directly with growing companies to replace repetitive business tasks with smart workflows, build high-performance products, and establish premium brand systems. I don't write boilerplate code; I engineer digital infrastructure that drives revenue.

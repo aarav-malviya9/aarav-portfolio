@@ -35,7 +35,7 @@ export default function WhoIAm() {
         
         <div className="grid md:grid-cols-2 gap-12 text-[17px] text-[#B8B8B4] leading-[1.75] font-sans">
           <p>
-            My name is Aarav Malviya. I am a 15-year-old builder, founder, and automation expert based in India. 
+            My name is Aarav Malviya. I am a builder, founder, and automation expert based in India. 
             I founded Blitzy because I saw a massive gap between what companies are doing and what they <i>could</i> be doing with modern technology.
           </p>
           <p>
