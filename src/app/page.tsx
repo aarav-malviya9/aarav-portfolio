@@ -22,7 +22,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#050505] text-white selection:bg-[#FFD400] selection:text-[#050505]">
+    <div className="relative min-h-screen bg-[#050505] text-white selection:bg-[#00FFFF] selection:text-[#050505]">
       {/* JSON-LD Schema */}
       <script
         type="application/ld+json"

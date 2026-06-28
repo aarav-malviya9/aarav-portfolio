@@ -32,7 +32,7 @@ export default function LetsBuild() {
               href="mailto:27aaravmalviya@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-mono text-[#C8FF00] text-[18px] hover:opacity-70 transition-opacity hover-trigger text-left"
+              className="font-mono text-[#00FFFF] text-[18px] hover:opacity-70 transition-opacity hover-trigger text-left"
             >
               27aaravmalviya@gmail.com
             </a>
@@ -49,7 +49,7 @@ export default function LetsBuild() {
             href="https://calendly.com" 
             target="_blank"
             rel="noopener noreferrer"
-            className="group block w-full h-full min-h-[300px] border border-[#2A2A27] bg-[#0A0A0A] hover:border-[#C8FF00] hover:bg-[#0E0E0C] transition-all duration-250 ease-in-out flex flex-col items-center justify-center p-8 text-center hover-trigger cursor-none"
+            className="group block w-full h-full min-h-[300px] border border-[#2A2A27] bg-[#0A0A0A] hover:border-[#00FFFF] hover:bg-[#0E0E0C] transition-all duration-250 ease-in-out flex flex-col items-center justify-center p-8 text-center hover-trigger cursor-none"
           >
             <div className="font-syne font-bold text-[#6B6B67] text-[28px] leading-none mb-2">
               BOOK A
@@ -57,7 +57,7 @@ export default function LetsBuild() {
             <div className="font-syne font-black text-[#F2EFE8] text-[40px] leading-none mb-6">
               30-MIN CALL
             </div>
-            <div className="font-syne font-black text-[#C8FF00] text-[80px] leading-none mb-8 group-hover:translate-x-4 transition-transform duration-300">
+            <div className="font-syne font-black text-[#00FFFF] text-[80px] leading-none mb-8 group-hover:translate-x-4 transition-transform duration-300">
               →
             </div>
             <div className="font-mono text-[#6B6B67] text-[11px]">

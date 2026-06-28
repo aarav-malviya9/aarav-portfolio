@@ -46,7 +46,7 @@ export default function Garden() {
     <section id="garden" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 border-b border-zinc-900 bg-[#050505] relative z-10">
       <div className="max-w-5xl mx-auto">
         <div className="mb-16">
-          <span className="font-mono text-xs uppercase tracking-widest text-yellow-electric font-semibold block mb-4">DIGITAL GARDEN</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-cyan-electric font-semibold block mb-4">DIGITAL GARDEN</span>
           <h2 className="text-4xl md:text-7xl font-display font-black text-white leading-tight uppercase select-none">
             LEARNING<br />IN PUBLIC.
           </h2>
@@ -73,7 +73,7 @@ export default function Garden() {
                       <span>✦</span>
                       <span>{article.readTime}</span>
                     </div>
-                    <h3 className="text-lg md:text-2xl font-display font-bold text-white uppercase group-hover:text-yellow-electric transition-colors">
+                    <h3 className="text-lg md:text-2xl font-display font-bold text-white uppercase group-hover:text-cyan-electric transition-colors">
                       {article.title}
                     </h3>
                     {!isActive && (
@@ -84,7 +84,7 @@ export default function Garden() {
                   </div>
                   <div>
                     {isActive ? (
-                      <ChevronUp className="w-6 h-6 text-yellow-electric" />
+                      <ChevronUp className="w-6 h-6 text-cyan-electric" />
                     ) : (
                       <ChevronDown className="w-6 h-6 text-zinc-500" />
                     )}

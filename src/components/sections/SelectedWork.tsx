@@ -120,7 +120,7 @@ function ProjectCard({
               href={project.link} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-black/50 border border-white/10 px-4 py-2 rounded-full font-mono text-[11px] text-white/70 hover:text-[#C8FF00] hover:border-[#C8FF00]/50 transition-all hover-trigger backdrop-blur-md"
+              className="flex items-center gap-2 bg-black/50 border border-white/10 px-4 py-2 rounded-full font-mono text-[11px] text-white/70 hover:text-[#00FFFF] hover:border-[#00FFFF]/50 transition-all hover-trigger backdrop-blur-md"
             >
               VIEW REPO <ArrowUpRight className="w-3 h-3" />
             </Link>
@@ -149,7 +149,7 @@ function ProjectCard({
             </div>
             
             <div className="text-right">
-              <div className="font-syne font-black text-[#C8FF00] text-[48px] md:text-[64px] leading-none tracking-tighter">
+              <div className="font-syne font-black text-[#00FFFF] text-[48px] md:text-[64px] leading-none tracking-tighter">
                 {project.stat}
               </div>
               <div className="font-mono text-[11px] text-white/50 uppercase tracking-wider mt-2 max-w-[150px] ml-auto">

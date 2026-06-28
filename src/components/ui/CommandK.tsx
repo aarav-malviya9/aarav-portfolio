@@ -64,7 +64,7 @@ export default function CommandK() {
 
   return (
     <>
-      <div className="fixed top-6 right-6 z-40 hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-yellow-electric/10 bg-black/60 backdrop-blur-md text-xs text-zinc-400 select-none">
+      <div className="fixed top-6 right-6 z-40 hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-cyan-electric/10 bg-black/60 backdrop-blur-md text-xs text-zinc-400 select-none">
         <Command className="w-3.5 h-3.5" />
         <span>K to navigate</span>
       </div>
@@ -77,7 +77,7 @@ export default function CommandK() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="w-full max-w-xl rounded-lg border border-yellow-electric/20 bg-[#0c0c0c] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] font-sans"
+              className="w-full max-w-xl rounded-lg border border-cyan-electric/20 bg-[#0c0c0c] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] font-sans"
             >
               <div className="flex items-center gap-3 px-4 py-3.5 border-b border-zinc-900 bg-black/30">
                 <Search className="w-4 h-4 text-zinc-500" />
@@ -105,7 +105,7 @@ export default function CommandK() {
                     <button
                       key={idx}
                       onClick={opt.action}
-                      className="w-full flex items-center justify-between px-3 py-2.5 rounded-md hover:bg-yellow-electric/5 text-left text-zinc-300 hover:text-white transition-colors text-sm hover-trigger group"
+                      className="w-full flex items-center justify-between px-3 py-2.5 rounded-md hover:bg-cyan-electric/5 text-left text-zinc-300 hover:text-white transition-colors text-sm hover-trigger group"
                     >
                       <div className="flex items-center gap-3">
                         <span className="text-[10px] uppercase tracking-wider text-zinc-600 bg-zinc-950 border border-zinc-900 px-1.5 py-0.5 rounded">
@@ -114,7 +114,7 @@ export default function CommandK() {
                         <span>{opt.label}</span>
                       </div>
                       {opt.shortcut && (
-                        <span className="text-[10px] text-zinc-500 bg-zinc-900 group-hover:text-yellow-electric px-1.5 py-0.5 rounded font-mono">
+                        <span className="text-[10px] text-zinc-500 bg-zinc-900 group-hover:text-cyan-electric px-1.5 py-0.5 rounded font-mono">
                           {opt.shortcut}
                         </span>
                       )}

@@ -31,7 +31,7 @@ export default function HowIBuild() {
         <div className="relative flex flex-col md:flex-row justify-between items-start gap-12 md:gap-4 mt-16">
           
           {/* Connecting Line */}
-          <div className="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-transparent via-[#FFD400]/30 to-transparent" />
+          <div className="hidden md:block absolute top-[28px] left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-transparent via-[#00FFFF]/30 to-transparent" />
           
           {steps.map((step, i) => (
             <motion.div 
@@ -44,8 +44,8 @@ export default function HowIBuild() {
             >
               {/* Glowing Node */}
               <div className="relative w-14 h-14 mb-8 flex items-center justify-center">
-                <div className="absolute inset-0 bg-[#FFD400] rounded-full blur-[20px] opacity-20" />
-                <div className="w-14 h-14 rounded-full bg-[#0a0a0a] border border-[#FFD400]/30 flex items-center justify-center font-mono text-[#FFD400] text-sm">
+                <div className="absolute inset-0 bg-[#00FFFF] rounded-full blur-[20px] opacity-20" />
+                <div className="w-14 h-14 rounded-full bg-[#0a0a0a] border border-[#00FFFF]/30 flex items-center justify-center font-mono text-[#00FFFF] text-sm">
                   {step.id}
                 </div>
               </div>

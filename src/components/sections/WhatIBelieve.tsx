@@ -55,7 +55,7 @@ export default function WhatIBelieve() {
               />
               
               <div className="relative z-10 flex flex-col h-full justify-between">
-                <h3 className="font-syne font-bold text-2xl md:text-3xl text-[#F2EFE8] mb-6 group-hover:text-[#FFD400] transition-colors">
+                <h3 className="font-syne font-bold text-2xl md:text-3xl text-[#F2EFE8] mb-6 group-hover:text-[#00FFFF] transition-colors">
                   {item.title}
                 </h3>
                 <p className="font-sans text-[#B8B8B4] text-[16px] leading-[1.6]">

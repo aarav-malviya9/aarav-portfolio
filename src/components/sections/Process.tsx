@@ -21,7 +21,7 @@ export default function Process() {
     <section id="process" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 border-b border-zinc-900 bg-[#050505] relative z-10">
       <div className="max-w-5xl mx-auto">
         <div className="mb-16">
-          <span className="font-mono text-xs uppercase tracking-widest text-yellow-electric font-semibold block mb-4">HOW I BUILD</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-cyan-electric font-semibold block mb-4">HOW I BUILD</span>
           <h2 className="text-4xl md:text-7xl font-display font-black text-white leading-tight uppercase select-none">
             A SYSTEMATIC<br />FLOW.
           </h2>
@@ -37,14 +37,14 @@ export default function Process() {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               className="relative pl-8 md:pl-16 group"
             >
-              <div className="absolute -left-[9px] top-1.5 w-4.5 h-4.5 rounded-full border-2 border-zinc-800 bg-[#050505] group-hover:border-yellow-electric transition-colors flex items-center justify-center">
-                <div className="w-1.5 h-1.5 rounded-full bg-transparent group-hover:bg-yellow-electric transition-colors" />
+              <div className="absolute -left-[9px] top-1.5 w-4.5 h-4.5 rounded-full border-2 border-zinc-800 bg-[#050505] group-hover:border-cyan-electric transition-colors flex items-center justify-center">
+                <div className="w-1.5 h-1.5 rounded-full bg-transparent group-hover:bg-cyan-electric transition-colors" />
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-center gap-4">
-                  <span className="font-mono text-sm text-yellow-electric font-bold">{step.num}</span>
-                  <h3 className="text-xl md:text-2xl font-display font-extrabold text-white uppercase group-hover:text-yellow-electric transition-colors">
+                  <span className="font-mono text-sm text-cyan-electric font-bold">{step.num}</span>
+                  <h3 className="text-xl md:text-2xl font-display font-extrabold text-white uppercase group-hover:text-cyan-electric transition-colors">
                     {step.title}
                   </h3>
                 </div>

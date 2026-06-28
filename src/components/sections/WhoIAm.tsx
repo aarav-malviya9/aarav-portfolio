@@ -21,7 +21,7 @@ export default function WhoIAm() {
       className="relative w-full min-h-screen flex items-center justify-center bg-[#050505] overflow-hidden py-32"
     >
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FFD400]/5 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00FFFF]/5 rounded-full blur-[120px]" />
       </div>
 
       <motion.div 
@@ -30,7 +30,7 @@ export default function WhoIAm() {
       >
         <h2 className="font-syne font-bold text-[clamp(40px,6vw,80px)] text-[#F2EFE8] leading-[1.1] tracking-tight mb-12">
           I don't just build websites. <br />
-          <span className="text-[#FFD400]">I engineer systems that scale.</span>
+          <span className="text-[#00FFFF]">I engineer systems that scale.</span>
         </h2>
         
         <div className="grid md:grid-cols-2 gap-12 text-[17px] text-[#B8B8B4] leading-[1.75] font-sans">

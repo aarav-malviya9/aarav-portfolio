@@ -33,11 +33,11 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, margin: "-100px" }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
-              className="group relative rounded-3xl p-[1px] bg-white/[0.05] hover:bg-[#FFD400]/50 transition-colors duration-500 overflow-hidden"
+              className="group relative rounded-3xl p-[1px] bg-white/[0.05] hover:bg-[#00FFFF]/50 transition-colors duration-500 overflow-hidden"
             >
               {/* Gradient border effect achieved by inner background */}
               <div className="relative h-full bg-[#0a0a0a] rounded-[23px] p-8 md:p-12 flex flex-col">
-                <h3 className="font-syne font-bold text-2xl md:text-3xl text-[#F2EFE8] mb-4 group-hover:text-[#FFD400] transition-colors">
+                <h3 className="font-syne font-bold text-2xl md:text-3xl text-[#F2EFE8] mb-4 group-hover:text-[#00FFFF] transition-colors">
                   {service.title}
                 </h3>
                 <p className="font-sans text-[#B8B8B4] text-[16px] leading-[1.6] mb-8">
@@ -47,7 +47,7 @@ export default function Services() {
                 <ul className="mt-auto flex flex-col gap-3">
                   {service.features.map((feature, j) => (
                     <li key={j} className="flex items-center gap-3 font-mono text-[12px] text-[#B8B8B4]">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#FFD400]/50" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00FFFF]/50" />
                       {feature}
                     </li>
                   ))}

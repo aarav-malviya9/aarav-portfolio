@@ -27,7 +27,7 @@ export default function Ticker({ items, speed = 25, reverse = false }: TickerPro
             className="flex items-center gap-4 text-xs font-mono tracking-widest text-zinc-400 uppercase"
           >
             {item}
-            <span className="text-yellow-electric font-bold text-sm">✦</span>
+            <span className="text-cyan-electric font-bold text-sm">✦</span>
           </span>
         ))}
       </motion.div>

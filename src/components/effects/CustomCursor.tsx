@@ -87,12 +87,12 @@ export default function CustomCursor() {
           y: ringY,
           translateX: '-50%',
           translateY: '-50%',
-          border: '1px solid #FFD400',
+          border: '1px solid #00FFFF',
         }}
         animate={{
           width: hovered ? 20 : 28,
           height: hovered ? 20 : 28,
-          backgroundColor: hovered ? '#FFD400' : 'transparent',
+          backgroundColor: hovered ? '#00FFFF' : 'transparent',
         }}
         transition={{ duration: 0.15 }}
       />

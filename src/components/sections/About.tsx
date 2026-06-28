@@ -14,7 +14,7 @@ export default function About() {
     <section id="about" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 border-b border-zinc-900 bg-[#050505] relative z-10">
       <div className="max-w-5xl mx-auto grid md:grid-cols-12 gap-12 items-start">
         <div className="md:col-span-5">
-          <span className="font-mono text-xs uppercase tracking-widest text-yellow-electric font-semibold block mb-4">WHO I AM</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-cyan-electric font-semibold block mb-4">WHO I AM</span>
           <h2 className="text-4xl md:text-6xl font-display font-extrabold text-white leading-tight uppercase select-none">
             BUILDER.<br />FOUNDER.<br />CURIOSITY DRIVEN.
           </h2>
@@ -28,8 +28,8 @@ export default function About() {
             As the founder of <strong className="text-white font-semibold">Blitzy</strong>, I collaborate directly with growing companies to replace repetitive business tasks with smart workflows, build high-performance products, and establish premium brand systems. I don't write boilerplate code; I engineer digital infrastructure that drives revenue.
           </p>
 
-          <div id="mission" className="p-6 rounded-lg border border-yellow-electric/15 bg-yellow-electric/5 glass-panel select-none">
-            <span className="font-mono text-[10px] uppercase tracking-wider text-yellow-electric block mb-2 font-bold">CURRENT MISSION</span>
+          <div id="mission" className="p-6 rounded-lg border border-cyan-electric/15 bg-cyan-electric/5 glass-panel select-none">
+            <span className="font-mono text-[10px] uppercase tracking-wider text-cyan-electric block mb-2 font-bold">CURRENT MISSION</span>
             <p className="text-white text-base font-medium mb-0">
               Architecting advanced multi-agent workflows and helping businesses automate operations at scale using custom LLM pipelines.
             </p>
@@ -40,7 +40,7 @@ export default function About() {
             <div className="grid sm:grid-cols-2 gap-3">
               {buildingNow.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3 p-3 rounded bg-zinc-950 border border-zinc-900/60 text-zinc-300 text-sm">
-                  <CheckCircle2 className="w-4.5 h-4.5 text-yellow-electric flex-shrink-0" />
+                  <CheckCircle2 className="w-4.5 h-4.5 text-cyan-electric flex-shrink-0" />
                   <span>{item}</span>
                 </div>
               ))}

@@ -62,7 +62,7 @@ export default function Work() {
     <section id="work" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 border-b border-zinc-900 bg-[#050505] relative z-10">
       <div className="max-w-5xl mx-auto">
         <div className="mb-16 text-left">
-          <span className="font-mono text-xs uppercase tracking-widest text-yellow-electric font-semibold block mb-4">SELECTED WORK</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-cyan-electric font-semibold block mb-4">SELECTED WORK</span>
           <h2 className="text-4xl md:text-7xl font-display font-black text-white leading-tight uppercase select-none">
             REAL PRODUCTS.<br />NO PLACEHOLDERS.
           </h2>
@@ -106,7 +106,7 @@ export default function Work() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-400 hover:text-yellow-electric transition-colors hover-trigger"
+                      className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-400 hover:text-cyan-electric transition-colors hover-trigger"
                     >
                       <Github className="w-4 h-4" />
                       Source Code
@@ -117,7 +117,7 @@ export default function Work() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-400 hover:text-yellow-electric transition-colors hover-trigger"
+                      className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-zinc-400 hover:text-cyan-electric transition-colors hover-trigger"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Live Project
@@ -136,7 +136,7 @@ export default function Work() {
                   <p>{project.solution}</p>
                 </div>
                 <div>
-                  <strong className="text-yellow-electric block font-mono text-xs uppercase tracking-wider mb-1">The Results</strong>
+                  <strong className="text-cyan-electric block font-mono text-xs uppercase tracking-wider mb-1">The Results</strong>
                   <p className="text-white font-medium">{project.results}</p>
                 </div>
               </div>

@@ -29,9 +29,9 @@ export default function Radar() {
         <div key={idx} className="flex flex-col gap-2">
           <div className="flex justify-between text-sm">
             <span className="font-tech text-white font-medium">{skill.name}</span>
-            <span className={`text-xs uppercase px-2 py-0.5 rounded border border-yellow-electric/15 ${
+            <span className={`text-xs uppercase px-2 py-0.5 rounded border border-cyan-electric/15 ${
               skill.status === 'Expert' 
-                ? 'text-yellow-electric bg-yellow-electric/5' 
+                ? 'text-cyan-electric bg-cyan-electric/5' 
                 : skill.status === 'Comfortable' 
                 ? 'text-zinc-300 bg-zinc-800/40' 
                 : 'text-zinc-500 bg-zinc-900/40'
@@ -45,7 +45,7 @@ export default function Radar() {
               whileInView={{ width: `${skill.level * 10}%` }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: 'easeOut', delay: idx * 0.05 }}
-              className="h-full bg-yellow-electric rounded-full"
+              className="h-full bg-cyan-electric rounded-full"
             />
           </div>
         </div>

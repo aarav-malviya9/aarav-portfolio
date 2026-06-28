@@ -22,7 +22,7 @@ export default function Playground() {
     <section id="playground" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 border-b border-zinc-900 bg-[#050505] relative z-10">
       <div className="max-w-5xl mx-auto space-y-24">
         <div>
-          <span className="font-mono text-xs uppercase tracking-widest text-yellow-electric font-semibold block mb-4">PLAYGROUND & TECH</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-cyan-electric font-semibold block mb-4">PLAYGROUND & TECH</span>
           <h2 className="text-4xl md:text-7xl font-display font-black text-white leading-tight uppercase select-none">
             INTERACTIVE<br />SANDBOX.
           </h2>
@@ -46,7 +46,7 @@ export default function Playground() {
                   x: 50 + (idx % 4) * 120,
                   y: 50 + Math.floor(idx / 4) * 70,
                 }}
-                className="absolute px-4 py-2 rounded-full border border-yellow-electric/25 bg-black text-yellow-electric text-xs font-mono font-medium hover:border-yellow-electric cursor-grab select-none z-10"
+                className="absolute px-4 py-2 rounded-full border border-cyan-electric/25 bg-black text-cyan-electric text-xs font-mono font-medium hover:border-cyan-electric cursor-grab select-none z-10"
               >
                 {tag}
               </motion.div>
@@ -64,7 +64,7 @@ export default function Playground() {
           <div className="grid md:grid-cols-4 gap-6">
             {timeline.map((event, idx) => (
               <div key={idx} className="p-5 rounded border border-zinc-900 bg-zinc-950/40 glass-panel space-y-3 font-sans">
-                <span className="font-mono text-lg font-bold text-yellow-electric block">{event.year}</span>
+                <span className="font-mono text-lg font-bold text-cyan-electric block">{event.year}</span>
                 <h4 className="font-display font-bold text-white text-lg uppercase tracking-tight">{event.title}</h4>
                 <p className="text-zinc-400 text-sm leading-relaxed">{event.desc}</p>
               </div>

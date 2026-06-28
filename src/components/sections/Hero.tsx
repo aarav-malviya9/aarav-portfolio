@@ -102,7 +102,7 @@ const AsciiBackground = () => {
           }
 
           if (grid[c][r].flash > 0) {
-            // Interpolate color between #1A1A1A and #FFD400 based on flash
+            // Interpolate color between #1A1A1A and #00FFFF based on flash
             ctx.fillStyle = `rgba(200, 255, 0, ${grid[c][r].flash})`; 
           } else {
             ctx.fillStyle = '#1A1A1A';
@@ -137,7 +137,7 @@ const TopBar = () => {
   return (
     <div className="fixed top-0 left-0 w-full z-50 border-b border-[#1E1E1C] bg-[#080808]/80 backdrop-blur-sm">
       <div className="flex justify-between md:justify-center items-center px-[7vw] h-16 relative">
-        <div className="text-[#FFD400] font-mono text-[13px] tracking-wider absolute left-[7vw]">
+        <div className="text-[#00FFFF] font-mono text-[13px] tracking-wider absolute left-[7vw]">
           AM
         </div>
         <div className="flex gap-4 md:gap-6 font-mono text-[11px] text-[#6B6B67] ml-auto md:ml-0">
@@ -191,7 +191,7 @@ const TypewriterText = () => {
       <motion.span
         animate={{ opacity: showCursor ? [1, 0] : 0 }}
         transition={{ repeat: showCursor ? Infinity : 0, duration: 0.8 }}
-        className="text-[#FFD400] ml-1"
+        className="text-[#00FFFF] ml-1"
       >
         |
       </motion.span>
@@ -267,7 +267,7 @@ export default function Hero() {
               color: 'transparent'
             }}
             whileHover={{
-              color: '#FFD400',
+              color: '#00FFFF',
               transition: { duration: 0.3 }
             }}
           >
@@ -293,7 +293,7 @@ export default function Hero() {
           <div className="flex gap-4">
             <Link 
               href="#contact"
-              className="bg-[#FFD400] hover:bg-[#F2EFE8] text-[#080808] font-mono font-bold text-[12px] px-[28px] py-[14px] transition-colors hover-trigger"
+              className="bg-[#00FFFF] hover:bg-[#F2EFE8] text-[#080808] font-mono font-bold text-[12px] px-[28px] py-[14px] transition-colors hover-trigger"
             >
               BOOK A CALL
             </Link>

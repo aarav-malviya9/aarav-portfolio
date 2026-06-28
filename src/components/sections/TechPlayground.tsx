@@ -26,7 +26,7 @@ export default function TechPlayground() {
           {[...techStack, ...techStack].map((tech, i) => (
             <div 
               key={i}
-              className="text-[#3A3A38] font-syne font-bold text-4xl md:text-6xl hover:text-[#FFD400] transition-colors duration-300 cursor-default"
+              className="text-[#3A3A38] font-syne font-bold text-4xl md:text-6xl hover:text-[#00FFFF] transition-colors duration-300 cursor-default"
               style={{ WebkitTextStroke: '1px #3A3A38' }}
             >
               {tech}

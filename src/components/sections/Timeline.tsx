@@ -45,9 +45,9 @@ export default function Timeline() {
                 className="relative pl-12"
               >
                 {/* Glowing Dot */}
-                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-[#FFD400] shadow-[0_0_15px_rgba(255,212,0,0.5)]" />
+                <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-[#00FFFF] shadow-[0_0_15px_rgba(0,255,255,0.5)]" />
                 
-                <span className="font-mono text-[#FFD400] text-[12px] tracking-widest block mb-2">
+                <span className="font-mono text-[#00FFFF] text-[12px] tracking-widest block mb-2">
                   {item.year}
                 </span>
                 <h3 className="font-syne font-bold text-2xl md:text-3xl text-[#F2EFE8] mb-4">

@@ -143,7 +143,7 @@ export default function Terminal() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-40 p-3 rounded-full border border-yellow-electric/20 bg-black/80 backdrop-blur-md text-yellow-electric hover:border-yellow-electric/50 transition-all flex items-center justify-center hover:scale-105 hover-trigger"
+        className="fixed bottom-6 right-6 z-40 p-3 rounded-full border border-cyan-electric/20 bg-black/80 backdrop-blur-md text-cyan-electric hover:border-cyan-electric/50 transition-all flex items-center justify-center hover:scale-105 hover-trigger"
         title="Open Terminal (Press /)"
       >
         <TerminalIcon className="w-5 h-5" />
@@ -157,12 +157,12 @@ export default function Terminal() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-              className="w-full max-w-2xl h-[450px] rounded-lg border border-yellow-electric/25 bg-black/90 flex flex-col overflow-hidden shadow-[0_0_50px_rgba(255,212,0,0.1)] font-mono text-sm"
+              className="w-full max-w-2xl h-[450px] rounded-lg border border-cyan-electric/25 bg-black/90 flex flex-col overflow-hidden shadow-[0_0_50px_rgba(0,255,255,0.1)] font-mono text-sm"
             >
-              <div className="flex justify-between items-center px-4 py-3 border-b border-yellow-electric/10 bg-zinc-900/50">
+              <div className="flex justify-between items-center px-4 py-3 border-b border-cyan-electric/10 bg-zinc-900/50">
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded-full bg-red-500/80" />
-                  <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                  <span className="w-3 h-3 rounded-full bg-cyan-500/80" />
                   <span className="w-3 h-3 rounded-full bg-green-500/80" />
                   <span className="text-zinc-400 text-xs ml-2">aarav-os -- terminal</span>
                 </div>
@@ -187,7 +187,7 @@ export default function Terminal() {
                         : line.type === 'error'
                         ? 'text-red-500'
                         : line.type === 'success'
-                        ? 'text-yellow-electric'
+                        ? 'text-cyan-electric'
                         : 'text-zinc-400'
                     }`}
                   >
@@ -196,14 +196,14 @@ export default function Terminal() {
                 ))}
               </div>
 
-              <form onSubmit={onSubmit} className="flex border-t border-yellow-electric/10 p-3 bg-black/50">
-                <span className="text-yellow-electric mr-2">blitzy@aarav:~$</span>
+              <form onSubmit={onSubmit} className="flex border-t border-cyan-electric/10 p-3 bg-black/50">
+                <span className="text-cyan-electric mr-2">blitzy@aarav:~$</span>
                 <input
                   ref={inputRef}
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  className="flex-1 bg-transparent text-white border-none outline-none caret-yellow-electric"
+                  className="flex-1 bg-transparent text-white border-none outline-none caret-cyan-electric"
                   placeholder="type help..."
                   autoComplete="off"
                 />
