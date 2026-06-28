@@ -63,7 +63,7 @@ export default function Work() {
       <div className="max-w-5xl mx-auto">
         <div className="mb-16 text-left">
           <span className="font-mono text-xs uppercase tracking-widest text-cyan-electric font-semibold block mb-4">SELECTED WORK</span>
-          <h2 className="text-4xl md:text-7xl font-display font-black text-white leading-tight uppercase select-none">
+          <h2 className="text-4xl md:text-7xl font-display font-black bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent leading-tight uppercase select-none">
             REAL PRODUCTS.<br />NO PLACEHOLDERS.
           </h2>
         </div>
@@ -84,7 +84,7 @@ export default function Work() {
                     <span>{project.role}</span>
                     <span>{project.year}</span>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-display font-bold text-white uppercase tracking-tight">
+                  <h3 className="text-2xl md:text-3xl font-display font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent uppercase tracking-tight">
                     {project.title}
                   </h3>
                 </div>
@@ -137,7 +137,7 @@ export default function Work() {
                 </div>
                 <div>
                   <strong className="text-cyan-electric block font-mono text-xs uppercase tracking-wider mb-1">The Results</strong>
-                  <p className="text-white font-medium">{project.results}</p>
+                  <p className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent font-medium">{project.results}</p>
                 </div>
               </div>
             </motion.div>

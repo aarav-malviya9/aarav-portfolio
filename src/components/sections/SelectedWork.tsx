@@ -199,7 +199,7 @@ export default function SelectedWork() {
             <div className="font-mono text-[#6B6B67] text-[11px] tracking-widest uppercase mb-4">
               SELECTED WORK
             </div>
-            <h2 className="font-syne font-black text-[#F2EFE8] leading-[0.9]" style={{ fontSize: 'clamp(32px, 5vw, 64px)' }}>
+            <h2 className="font-syne font-black bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent leading-[0.9]" style={{ fontSize: 'clamp(32px, 5vw, 64px)' }}>
               REAL PRODUCTS.
             </h2>
           </div>

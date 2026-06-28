@@ -21,7 +21,7 @@ export default function Services() {
   return (
     <section className="w-full py-32 bg-[#050505] px-[7vw]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-syne font-bold text-[clamp(32px,5vw,56px)] text-[#F2EFE8] mb-16 tracking-tight text-center">
+        <h2 className="font-syne font-bold text-[clamp(32px,5vw,56px)] bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent mb-16 tracking-tight text-center">
           What I Do
         </h2>
 
@@ -37,7 +37,7 @@ export default function Services() {
             >
               {/* Gradient border effect achieved by inner background */}
               <div className="relative h-full bg-[#0a0a0a] rounded-[23px] p-8 md:p-12 flex flex-col">
-                <h3 className="font-syne font-bold text-2xl md:text-3xl text-[#F2EFE8] mb-4 group-hover:text-[#00FFFF] transition-colors">
+                <h3 className="font-syne font-bold text-2xl md:text-3xl bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent mb-4">
                   {service.title}
                 </h3>
                 <p className="font-sans text-[#B8B8B4] text-[16px] leading-[1.6] mb-8">
